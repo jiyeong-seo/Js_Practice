@@ -21,3 +21,7 @@ class User {
 
 const test = new User("문자열");
 
+
+let 변수 = 'string';
+// 아래의 코드와 동일하다.
+// let 변수 :string = "string";
