@@ -38,6 +38,11 @@
 // 에러를 발생시킨다.
 // let 변수1 :string = 이름;
 
-let 나이: number;
-// number + 1 -> 허용
-나이 + 1;
+// let 나이: number;
+// // number + 1 -> 허용
+// 나이 + 1;
+
+// function 함수(x?: number) {}
+
+// // 타입스트립트에서의 ? 연산자와 undefinde 는 동일한 의미를 가진다.
+// function 함수1(x: number | undefined) {}
