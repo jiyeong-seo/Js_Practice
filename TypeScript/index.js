@@ -1,36 +1,37 @@
-// type Name = string | number;
-// let 변수명: Name = "문자열";
-// function 함수(x: number): number {
-//   return x * 2;
+// 1
+// function  printText (text? : string) :void {
+//     if( text ) {
+//         console.log('이름이 없습니다.');
+//     } else {
+//         console.log(`안녕하세요 ${text}`);
+//     }
 // }
-// 함수(2);
-// type Member = {
-//   [key: string]: string;
-// };
-// let john: Member = { name: "John", age: "123" };
-// class User {
-//   name: string;
-//   constructor(name: string) {
-//     this.name = name;
-//   }
+// printText();
+// test
+// const testFunc = (text: string | number) :number | string => {
+//    if ( typeof text !== 'number') {
+//        return `string length : ${text.length}`
+//    } else if ( typeof text == 'number') {
+//        return text.toString().length;
+//    }
 // }
-// const test = new User("문자열");
-// let 변수 = "string";
-// 아래의 코드와 동일하다.
-// let 변수 :string = "string";
-// 변수 회원들에 할당될 배열 안에
-// number 또는 string이 요소로 들어올 수 있도록 타입을 지정한 코드.
-// let 회원들: (number | string)[] = [1, "2", 3];
-// 변수 회원들1에 할당될 값이
-// number이거나, 혹은 string이 요소로 들어오는 배열을 타입으로 지정한 코드.
-// let 회원들1: number | string[] = 1;
-// let 이름 :unknown;
-// 이름 = '';
-// 에러를 발생시킨다.
-// let 변수1 :string = 이름;
-// let 나이: number;
-// // number + 1 -> 허용
-// 나이 + 1;
-// function 함수(x?: number) {}
-// // 타입스트립트에서의 ? 연산자와 undefinde 는 동일한 의미를 가진다.
-// function 함수1(x: number | undefined) {}
+// console.log(testFunc("1234"));
+// 4강 문제.3
+var checkMarriagePossibility = function (income, ownHome, charm) {
+    var totalScore = 0;
+    // 월급
+    totalScore += income;
+    // 자가 보유 여부 점수
+    if (ownHome === true) {
+        totalScore += 500;
+    }
+    // 매력 점수
+    if (charm === "상") {
+        totalScore += 100;
+    }
+    // 결혼 가능 여부 검사
+    if (totalScore >= 600) {
+        return "결혼가능";
+    }
+};
+console.log(checkMarriagePossibility(500, false, "상"));
